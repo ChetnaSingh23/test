@@ -21,7 +21,7 @@ class Preethi extends React.Component {
     return (
       <div>
         <h2>Preethi</h2> 
-
+        <p>helllo PARAGRAPH tag</p>
       </div>
       
     );
