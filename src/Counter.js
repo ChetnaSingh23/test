@@ -1,4 +1,7 @@
 import React from 'react';
+import Preethi from './Preethi';
+import Sowmya from './Sowmya';
+
  
 /**
  * A counter button: tap the button to increase the count.
@@ -13,13 +16,27 @@ class Counter extends React.Component {
  
   render() {
     return (
-      <button
+      <div>
+        <button
         onClick={() => {
           this.setState({ count: this.state.count + 1 });
         }}
       >
-        Count: {this.state.count}
+        INCREASE COUNT : {this.state.count}
       </button>
+      <h1>{this.state.count}</h1>
+      <button
+        onClick={() => {
+          this.setState({ count: this.state.count - 1 });
+        }}
+      >
+        DECREASE COUNT : {this.state.count}
+      </button>
+      <h1>{this.state.count}</h1>
+      <Sowmya />
+      <Preethi />
+      </div>
+      
     );
   }
 }
