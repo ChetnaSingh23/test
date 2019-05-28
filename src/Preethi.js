@@ -7,6 +7,7 @@ import React from 'react';
     * PLACE A ANCHOR TAG WHICH WILL OPEN GOOGLE.COM
     PLACE A PARAGRAPH TAG WITH SOME USEFUL DATA
     INPUT TYPE COLOR, DATE TIME AND WEEK
+    from line 24
     */
 class Preethi extends React.Component {
   constructor() {
