@@ -1,6 +1,6 @@
 import React from 'react';
-import Preethi from './Preethi';
-import Sowmya from './Sowmya';
+import Preethi from './preeti/Preethi';
+import Sowmya from './sowmya/Sowmya';  //import ur new files
 
  
 /**
@@ -34,7 +34,7 @@ class Counter extends React.Component {
       </button>
       <h1>{this.state.count}</h1>
       <Sowmya />
-      <Preethi />
+      <Preethi /> {/* ADD NEW COMPONENT*/}
       </div>
       
     );
