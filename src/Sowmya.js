@@ -21,7 +21,7 @@ class Sowmya extends React.Component {
       <div>
         <h2>Sowmya</h2>
         <a href="https://www.google.com">Google</a><br/>
-        <p>This is a paragraph.</p><br/>
+        <p>This is a paragraph.You have to write a paragraph.</p><br/>
         <label for="color_example">Color:</label>
         <input type="color" name="color_example" /> <br />
         <label for="date_and_time">Date with time:</label>
