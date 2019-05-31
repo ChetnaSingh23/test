@@ -1,4 +1,5 @@
 import React from 'react';
+import ArticleList from './ArticleList'
  
 /**
  * A counter button: tap the button to increase the count.
@@ -9,6 +10,9 @@ import React from 'react';
     *write a paragraph...(in lower case)
     *CHOOSE UR BACKGROUND COLOR
     * style ur headings of previous assignment, make the content in center
+
+    31-05-2019
+    MAKE A COMPONENT IMPORT THE MOCK AND DISPLAY ALL THE ATTRIBUTES OF THAT MOCK PROPERLY, STYLE IN UR WAY
     
     */
 
@@ -101,6 +105,23 @@ class Sowmya extends React.Component {
         <div style={divRectangle}>
           <div style={divCircle}></div>
         </div>
+        <div>
+        <h2>The datalist tag</h2>
+        <input list="myval"/>
+          <datalist id="myval">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">test</option>
+            <option value="4">no</option>
+            <option value="5">123hello</option>
+            <option value="66">000nope</option>
+          </datalist>
+          Search:: <input  type="search"/>
+          Prev search :::: <input type="text" />
+          <input  type="radio"/> Male <br/>
+          <input  type="radio"/> Female <br/>
+        </div>
+        <ArticleList/>
       </div>
       
     );
