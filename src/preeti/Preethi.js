@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowData from './ShowData';
  
 /**
  * A counter button: tap the button to increase the count.
@@ -59,6 +60,7 @@ class Preethi extends React.Component {
           <p style={square}>
           </p>
         </div>
+        <ShowData/>
       </div>
       
     );

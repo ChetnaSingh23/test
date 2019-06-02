@@ -71,34 +71,57 @@ const employees = [
   }
 ];
 
-class EmployeeInfo extends React.Component {
+class ShowData extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      success:false,
+    };
+  }
+
+  showSuccess(){
+    this.setState({success:!this.state.success})
+  }
 
   showDetails(employees) {
     return(
       employees.map((employee, i) => {
         return(
-        <div key = {i}>
-          <div style = {divStyles}><span style={spanStyles}>{i+1}</span></div>
-          <div style= {divStyles}>
-            <span style={spanStyles}>{employee.name}</span><br />
-            {employee.job_title}<br />
-            {employee.department}<br />
-            {employee.experience} years of experience
-            <button  type="button"   class="btn btn-primary check">Check</button>
-          </div>
-        </div>);
-      })
+          <tr key = {i}>
+            <td>{employee.name}</td>
+            <td>{employee.job_title}</td>
+            <td>{employee.department}</td>
+            <td>{employee.experience}</td>
+            <td><button class="btn btn-danger" onClick={() => this.showSuccess()}>Edit</button></td>
+          </tr>);
+        })
     );
   }
 
   render() {
     return(
-      <div style={maindivStyles}>
-        {this.showDetails(employees)}
-        {var1+var2}
+      <div class="container">
+      {this.state.success && 
+        <div class="alert alert-success alert-dismissible fade show">
+          <button type="button" class="close"  onClick={() => this.showSuccess()} data-dismiss="alert">&times;</button>
+          <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>}
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Department</th>
+              <th>Job Title</th>
+              <th>Exp</th>
+            </tr>
+          </thead>
+          <tbody>
+           {this.showDetails(employees)}
+          </tbody>
+        </table>
       </div>
     )
   }
 }
 
-export default EmployeeInfo;
+export default ShowData;
