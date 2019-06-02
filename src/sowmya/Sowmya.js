@@ -1,5 +1,6 @@
 import React from 'react';
 import ArticleList from './ArticleList'
+import EmployeeInfo from './EmployeeInfo'
  
 /**
  * A counter button: tap the button to increase the count.
@@ -122,8 +123,9 @@ class Sowmya extends React.Component {
           <input  type="radio"/> Female <br/>
         </div>
         <ArticleList/>
+        <h3 style={h3Styles}>Employee Information</h3>
+        <EmployeeInfo />
       </div>
-      
     );
   }
 }
