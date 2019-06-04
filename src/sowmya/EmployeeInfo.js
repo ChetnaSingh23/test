@@ -77,25 +77,32 @@ class EmployeeInfo extends React.Component {
     return(
       employees.map((employee, i) => {
         return(
-        <div key = {i}>
-          <div style = {divStyles}><span style={spanStyles}>{i+1}</span></div>
-          <div style= {divStyles}>
-            <span style={spanStyles}>{employee.name}</span><br />
-            {employee.job_title}<br />
-            {employee.department}<br />
-            {employee.experience} years of experience
-            <button  type="button"   class="btn btn-primary check">Check</button>
-          </div>
-        </div>);
+          <tr>
+            <td>{employee.name}</td>
+            <td>{employee.job_title}</td>
+            <td>{employee.department}</td>
+            <td>{employee.experience}</td> 
+          </tr>);
       })
     );
   }
 
   render() {
     return(
-      <div style={maindivStyles}>
-        {this.showDetails(employees)}
-        {var1+var2}
+      <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Job Title</th>
+              <th>Department</th>
+              <th>Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.showDetails(employees)}
+          </tbody>
+        </table>
       </div>
     )
   }
